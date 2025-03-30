@@ -234,3 +234,52 @@ body.bg-dark {
 .bg-dark .chip-delete:hover {
   color: red;
 }
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  .forecast-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .forecast-card {
+    min-width: 100px;
+    padding: 10px;
+  }
+  input[type="text"] {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .forecast-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .forecast-card {
+    width: 100%;
+  }
+  .welcome-prompt {
+    padding: 1.5rem;
+  }
+  input[type="text"] {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
