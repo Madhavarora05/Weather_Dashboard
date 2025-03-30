@@ -1,0 +1,74 @@
+.recent-searches {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.recent-searches h5 {
+  margin-bottom: 15px;
+  color: darkslategray;
+}
+
+.search-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chip {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chip span {
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.chip:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.chip-delete {
+  background: none;
+  border: none;
+  color: dimgray;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.chip-delete:hover {
+  color: crimson;
+}
+
+.bg-dark .recent-searches h5 {
+  color: white;
+}
+
+.bg-dark .chip {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.bg-dark .chip:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.bg-dark .chip-delete {
+  color: lightgray;
+}
+
+.bg-dark .chip-delete:hover {
+  color: crimson;
+}

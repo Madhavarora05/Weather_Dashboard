@@ -1,0 +1,152 @@
+.weather-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.last-updated {
+    color: dimgray;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.refresh-button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.refresh-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.weather-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.weather-clear::before { background-image: url('../images/clear.jpeg'); }
+.weather-rain::before { background-image: url('../images/rainy.jpeg'); }
+.weather-snow::before { background-image: url('../images/snow.jpeg'); }
+.weather-clouds::before { background-image: url('../images/cloudy.jpeg'); }
+.weather-storm::before { background-image: url('../images/storm.jpeg'); }
+
+.current-weather {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.weather-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-details {
+    flex-grow: 1;
+}
+
+.weather-details h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: darkslategray;
+}
+
+.temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: darkslategray;
+    margin: 0.5rem 0;
+}
+
+.condition {
+    font-size: 1.1rem;
+    color: dimgray;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.extra-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.info-item span:first-child {
+    color: dimgray;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item span:last-child {
+    color: darkslategray;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.bg-dark .weather-card {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.bg-dark .weather-details h2,
+.bg-dark .temperature,
+.bg-dark .info-item span:last-child {
+    color: white;
+}
+
+.bg-dark .condition,
+.bg-dark .last-updated,
+.bg-dark .info-item span:first-child {
+    color: lightgray;
+}
+
+.bg-dark .refresh-button {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.bg-dark .refresh-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bg-dark .extra-info {
+    background: rgba(255, 255, 255, 0.05);
+}

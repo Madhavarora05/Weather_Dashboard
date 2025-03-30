@@ -1,0 +1,89 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  margin: 2rem 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.error-content {
+  text-align: center;
+}
+
+.error-icon {
+  font-size: 4rem;
+  color: crimson;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.error-content h3 {
+  color: darkslategray;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.error-content p {
+  color: dimgray;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.error-button {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+}
+
+.error-button:hover {
+  background: darkred;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.bg-dark .error-container {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bg-dark .error-content h3 {
+  color: white;
+}
+
+.bg-dark .error-content p {
+  color: gainsboro;
+}
