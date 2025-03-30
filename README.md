@@ -16,8 +16,11 @@ A modern and responsive Weather Dashboard web application built with React.js. I
 
 ## Screenshots
 
-- **Weather Dashboard Interface**
-  ![Screenshot 1](/screenshot/screenshot1.png)
+
+- **Dark Mode - Weather Dashboard**
+![Screenshot 1](/Screenshots/screenshot1.png)
+- **Light Mode - Weather Dashboard**
+![Screenshot 2](/Screenshots/screenshot2.png)
 
 ## Tech Stack
 
