@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Weather Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern and responsive Weather Dashboard web application built with React.js. It fetches real-time weather data using the OpenWeatherMap API and provides users with live weather updates for any searched city. The app includes features such as a 5-day weather forecast, search history, and a clean, user-friendly interface.
 
-## Available Scripts
+## Deployment Link
 
-In the project directory, you can run:
+[Weather Dashboard](https://weather-dashboard-neon-gamma.vercel.app/)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Real-Time Weather Updates**: Get current weather conditions for any city worldwide.
+- **5-Day Forecast**: View a detailed 5-day weather forecast.
+- **Search History**: Save and access recent city searches.
+- **Responsive Design**: Fully optimized for desktop and mobile devices.
+- **Error Handling**: User-friendly error messages for invalid searches or API issues.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+- **Weather Dashboard Interface**
+  ![Screenshot 1](/screenshot/screenshot1.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+- **Frontend**: React.js
+- **API**: OpenWeatherMap API
+- **Icons**: React Icons
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/Madhavarora05/Weather_Dashboard.git
+   cd Weather_Dashboard
+   ```
 
-### `npm run eject`
+2. Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Create a `.env` file in the root directory and add your OpenWeatherMap API key:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```env
+   REACT_APP_WEATHER_API_KEY=your_api_key_here
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Start the development server:
 
-## Learn More
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Open the app in your browser at `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Scripts
 
-### Code Splitting
+- `npm start`: Start the development server.
+- `npm run build`: Build the app for production.
+- `npm test`: Launch the test runner.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Folder Structure
 
-### Analyzing the Bundle Size
+```
+Weather_Dashboard/
+├── public/               # Static assets
+│   ├── index.html        # Main HTML file
+│   └── favicon.ico       # Favicon
+├── src/
+│   ├── components/       # React components
+│   │   ├── SearchBar.js  # Search bar component
+│   │   ├── WeatherCard.js# Weather display component
+│   │   └── Forecast.js   # 5-day forecast component
+│   ├── App.js            # Main app component
+│   ├── index.js          # Entry point
+│   └── App.css           # Global styles
+├── .env                  # Environment variables
+├── .gitignore            # Git ignore file
+├── LICENSE               # License file
+├── README.md             # Project documentation
+├── package.json          # Project configuration
+└── package-lock.json     # Lockfile for dependencies
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Environment Variables
 
-### Making a Progressive Web App
+The app requires the following environment variable:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `REACT_APP_WEATHER_API_KEY`: Your OpenWeatherMap API key.
 
-### Advanced Configuration
+## API Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The app uses the OpenWeatherMap API to fetch weather data. You can sign up for a free API key at [OpenWeatherMap](https://openweathermap.org/api).
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### `npm run build` fails to minify
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [OpenWeatherMap API](https://openweathermap.org/api) for providing weather data.
+- [React Icons](https://react-icons.github.io/react-icons/) for the icons used in the app.
